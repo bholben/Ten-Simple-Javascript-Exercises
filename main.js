@@ -5,17 +5,26 @@ var max = function (a, b) {
   return (a > b) ? a : b;
 };
 
+console.log(max(123, 43));
+
+
 // Define a function maxOfThree() that takes three numbers as arguments and
 // returns the largest of them.
 var maxOfThree = function (a, b, c) {
   return max(max(a, b), c);
 };
 
+console.log(maxOfThree(83, 333, 4));
+
+
 // Write a function that takes a character (i.e. a string of length 1) and
 // returns true if it is a vowel, false otherwise.
 var isVowel = function (char) {
   return ['a', 'e', 'i', 'o', 'u'].indexOf(char) !== -1;
 };
+
+console.log(isVowel('g'));
+
 
 // Write a function translate() that will translate a text into "rövarspråket".
 // That is, double every consonant and place an occurrence of "o" in between.
@@ -34,6 +43,9 @@ var translate = function (text) {
   return newText.join('');
 };
 
+console.log(translate('this is fun'));
+
+
 // Define a function sum() and a function multiply() that sums and multiplies
 // (respectively) all the numbers in an array of numbers. For example,
 // sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
@@ -51,6 +63,10 @@ var multiply = function(arr) {
   return product;
 };
 
+console.log(sum([1,2,3,4]));
+console.log(multiply([1,2,3,4]));
+
+
 // Define a function reverse() that computes the reversal of a string. For
 // example, reverse("jag testar") should return the string "ratset gaj".
 var reverse = function (str) {
@@ -58,6 +74,9 @@ var reverse = function (str) {
   revChars = chars.reverse();
   return revChars.join('');
 };
+
+console.log(reverse('jag testar'));
+
 
 // Represent a small bilingual lexicon as a Javascript object in the following fashion
 // {"merry":"god", "christmas":"jul", "and":"och", "happy":gott", "new":"nytt", "year":"år"}
@@ -79,6 +98,9 @@ var translateToSwedish = function (text) {
   return translated.join(' ');
 };
 
+console.log(translateToSwedish('merry christmas and happy new year'));
+
+
 // Write a function findLongestWord() that takes an array of words and
 // returns the length of the longest one.
 var findLongestWord = function (words) {
@@ -88,6 +110,9 @@ var findLongestWord = function (words) {
   return Math.max.apply(Math, lengths)
 };
 
+console.log(findLongestWord(['the', 'quick', 'brown', 'fox', 'jumped']));
+
+
 // Write a function filterLongWords() that takes an array of words and an
 // integer i and returns the array of words that are longer than i.
 var filterLongWords = function (words, i) {
@@ -95,6 +120,9 @@ var filterLongWords = function (words, i) {
     return word.length > i;
   });
 };
+
+console.log(filterLongWords(['the', 'quick', 'brown', 'fox', 'jumped'], 4));
+
 
 // Write a function charFreq() that takes a string and builds a frequency
 // listing of the characters contained in it. Represent the frequency
@@ -115,4 +143,6 @@ var charFreq = function (text) {
 
   return charHist;
 };
+
+console.log(charFreq('abbabcbdbabdbdbabababcbcbab'));
 
