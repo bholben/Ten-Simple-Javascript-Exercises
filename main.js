@@ -39,7 +39,7 @@ var translate = function (text) {
     } else {
       newText.push(char);
     }
-  })
+  });
   return newText.join('');
 };
 
@@ -52,14 +52,14 @@ console.log(translate('this is fun'));
 var sum = function(arr) {
   var sum = arr.reduce(function (prev, curr) {
     return prev + curr;
-  })
+  });
   return sum;
 };
 
 var multiply = function(arr) {
   var product = arr.reduce(function (prev, curr) {
     return prev * curr;
-  })
+  });
   return product;
 };
 
@@ -107,7 +107,7 @@ var findLongestWord = function (words) {
   var lengths = words.map(function (word) {
     return word.length;
   });
-  return Math.max.apply(Math, lengths)
+  return Math.max.apply(null, lengths);
 };
 
 console.log(findLongestWord(['the', 'quick', 'brown', 'fox', 'jumped']));
